@@ -10,3 +10,9 @@ const square = x =>x*x;
 module.exports.pi = Pi;
 module.exports.greet = greet;
 module.exports.square  = square;
+//there is a shoreter syntax
+
+//you can use
+//modules.exports ====> exports
+//exports.pi = pi;
+//exports.square = square;
