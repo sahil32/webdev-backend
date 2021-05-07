@@ -6,3 +6,4 @@ for(let arg of args)
     console.log(arg);
 }
 console.log(typeof process.argv);
+//run it with node args.js {list of arguments}
