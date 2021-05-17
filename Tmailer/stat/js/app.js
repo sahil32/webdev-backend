@@ -25,7 +25,6 @@ btn.addEventListener('click',(event)=>{
             let res = await fetch('http://localhost:3000/home',config);
             const tokendata = await res.json();
             localStorage.setItem("token",tokendata.token);
-            
         }
         catch (e){
             return e;

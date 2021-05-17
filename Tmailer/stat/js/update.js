@@ -1,8 +1,10 @@
+alert('update page!!');
 let form = document.getElementById('myform');
 let btn = form.elements[3];
 let data = {};
 btn.addEventListener('click',(event)=>{
-    event.preventDefault();
+    // event.preventDefault();
+   
     let pass1 = form.elements[1].value;
     let pass2 = form.elements[2].value;
     let token = localStorage.getItem('token');
@@ -11,24 +13,23 @@ btn.addEventListener('click',(event)=>{
     data = {
         newpassword:`${pass1}`
         }
-
+        
         let config = {
-            method: 'POST',
+            method: 'PATCH',
             headers: {
                 Accept :'application/json',
                 'content-type':'application/json',
-                Authorisation: 'Bearer ' + token
+                authorization: 'Bearer ' + token
             },
             body: JSON.stringify(data)
         }
         async function updateData(){
             try{
-                let res = await fetch('http://localhost:3000/api/update',config);
-                let info = res.json();
+                 await fetch('http://localhost:3000/api/update',config);
                 
             }
-            catch{
-
+            catch (e){
+                return e;
             }
         }
     }
