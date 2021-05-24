@@ -2,3 +2,33 @@ body{
     background-color: green;
 }
 
+#unique
+{
+    visibility:hidden;
+    margin-top: 100px;
+}
+input{
+    display: block;
+    position:absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+input[type="radio"]{
+    opacity:0.01;
+    z-index: 100;
+}
+label+input[type="radio"]:checked{
+  background: yellow;
+}
+label {
+    padding: 5px;
+    border: 1px solid #CCC;
+    cursor: pointer;
+    z-index: 90;
+  }
+  
+  label:hover {
+    background: #DDD;
+  }

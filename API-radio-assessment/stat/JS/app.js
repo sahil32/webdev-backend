@@ -15,6 +15,7 @@ let btn = document.querySelectorAll('input');
 for (let i = 0; i <= 2; i++) {
     btn[i].addEventListener('click', (e) => {
         e.stopPropagation();
+        par.style.visibility="visible";
         const req = new XMLHttpRequest();
         req.onload = function () {
             document.querySelector('select').innerHTML = "";
